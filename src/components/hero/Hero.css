@@ -1,9 +1,11 @@
 .hero {
-  background: conic-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background:
+    conic-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(../../assets/background1.jpg) center/cover no-repeat;
   display: flex;
   align-items: center;
   padding: 4rem 2rem;
+  animation: fadeIn 2s;
 }
 
 .hero-text {
@@ -176,7 +178,7 @@
   }
   .hero-text h2 {
     font-size: 28px;
-    word-spacing: 2px;
+    word-spacing: 0px;
   }
   .hero-text p {
     font-size: 13px;

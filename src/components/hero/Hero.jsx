@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Hero.css";
 import creator from "../../assets/creator.jpg";
+import SocialLink from "../socials/socialLink";
 const Hero = () => {
   return (
     <div className="hero">

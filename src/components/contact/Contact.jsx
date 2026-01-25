@@ -3,9 +3,27 @@ import "./Contact.css";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import SocialLinks from "../socials/socialLink";
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+    const formData = new FormData(event.target);
+    formData.append("access_key", process.env.REACT_APP_WEB3FORMS_KEY);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+  };
+
   return (
-    <section className="contact-section">
+    <section className="contact">
       <div className="contact-grid">
         {/* Left */}
         <div className="contact-info">
@@ -17,7 +35,7 @@ const Contact = () => {
           </p>
           <div className="email-card">
             <div className="icon">
-              <EmailOutlinedIcon />
+              <EmailOutlinedIcon fontSize={"large"} />
             </div>
 
             <div className="text">
@@ -27,7 +45,7 @@ const Contact = () => {
           </div>
           <div className="email-card">
             <div className="icon">
-              <LocationOnOutlinedIcon />
+              <LocationOnOutlinedIcon fontSize={"large"} />
             </div>
 
             <div className="text">
@@ -37,7 +55,7 @@ const Contact = () => {
           </div>
           <div className="email-card">
             <div className="icon">
-              <PhoneOutlinedIcon />
+              <PhoneOutlinedIcon fontSize={"large"} />
             </div>
 
             <div className="text">
@@ -48,27 +66,26 @@ const Contact = () => {
 
           <p className="follow">Follow me on</p>
           <div className="socials">
-            <span>🐙</span>
-            <span>in</span>
-            <span>𝕏</span>
+            <SocialLinks />
           </div>
         </div>
 
         {/* Right */}
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={onSubmit}>
           <label>Name</label>
-          <input name="name" placeholder="Your Name" required />
+          <input type="text" placeholder="Your name" name="name" required />
           <label>Email</label>
-          <input name="email" placeholder="your@email.com" required />
+          <input type="email" name="email" placeholder="Your email" required />
 
           <label>Message</label>
           <textarea
             name="message"
             rows="6"
             placeholder="Tell me about your project..."
-          />
-
+            required
+          ></textarea>
           <button>✈ Send Message</button>
+          <p>{result}</p>
         </form>
       </div>
     </section>

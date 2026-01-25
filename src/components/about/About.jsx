@@ -8,20 +8,23 @@ const About = () => {
       <div className="about-right">
         <h2>Passionate about creating exceptional digital experiences</h2>
         <p>
-          I'm a frontend developer with a keen eye for design and a passion for
-          writing clean, efficient code. With over 5 years of experience, I've
-          worked on diverse projects ranging from responsive websites to complex
-          web applications.
+          I’m a Frontend Developer passionate about building clean, responsive,
+          and user-friendly digital experiences. I enjoy turning ideas and
+          designs into functional web interfaces using modern web technologies
         </p>
         <p>
-          My expertise lies in modern JavaScript frameworks, particularly React,
-          and I'm committed to staying current with the latest web technologies
-          and best practices.
+          My work focuses on HTML, CSS, JavaScript, and React, where I pay close
+          attention to performance, accessibility, and visual detail. Through
+          personal projects and continuous practice, I’ve built responsive
+          websites and interactive web applications while strengthening my
+          understanding of core software engineering principles.
         </p>
         <p>
-          When I'm not coding, you'll find me contributing to open-source
-          projects, writing technical articles, or exploring new frameworks and
-          tools to enhance my development workflow
+          I’m committed to constant learning and growth, staying up to date with
+          modern frontend tools, best practices, and emerging technologies.
+          Beyond coding, I enjoy improving my problem-solving skills, refining
+          my workflow, and challenging myself to build better, more scalable
+          solutions with each proje
         </p>
       </div>
       <div className="about-left">

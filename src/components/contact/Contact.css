@@ -1,7 +1,7 @@
-.contact-section {
-  padding: 120px 3%;
+.contact {
+  padding: 120px 6%;
   background: conic-gradient(180deg, #050b12 0%, #020509 100%);
-  color: wheat;
+  color: white;
 }
 .contact-grid {
   display: grid;
@@ -10,9 +10,9 @@
   align-items: center;
 }
 .contact-info {
-  margin-bottom: 40%;
   padding: 0;
 }
+
 .contact-info h3 {
   font-size: 30px;
   color: #ebecf1;
@@ -32,6 +32,12 @@
   backdrop-filter: blur(14px);
   margin-top: 20px;
 }
+.email-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.25);
+  border-color: rgba(139, 92, 246, 0.6);
+}
 .icon {
   width: 60px;
   height: 60px;
@@ -41,6 +47,9 @@
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
   box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
   margin: 10px 10px;
+}
+.icon:hover {
+  transform: scale(1.1);
 }
 .icon p {
   font-size: 18px;
@@ -59,7 +68,15 @@
   backdrop-filter: blur(18px);
   width: 80%;
   line-height: 1.6;
-  margin-bottom: 50%;
+  color: white;
+  transition:
+    transform 0.3s ease,
+    border 0.3s ease;
+}
+.contact-form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.25);
+  border-color: rgba(139, 92, 246, 0.6);
 }
 input,
 textarea {
@@ -68,7 +85,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   padding: 20px;
-  color: #e5e7eb;
+  color: white;
   outline: none;
   margin-bottom: 20px;
 }
@@ -87,6 +104,12 @@ form button {
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   box-shadow: 0 20px 40px rgba(139, 92, 246, 0.45);
   cursor: pointer;
+}
+form button:hover {
+  transform: scale(1.1);
+}
+form p {
+  margin-top: 10px;
 }
 .socials {
   display: flex;

@@ -9,16 +9,48 @@ nav {
   align-items: center;
   z-index: 10;
 }
-
+nav h2 {
+  display: none;
+}
 .logo {
   width: 120px;
+  height: 50px;
 }
 nav ul li {
   display: inline-block;
   margin: 5px 20px;
   font-size: 18px;
   color: white;
+} /* Navbar.css */
+
+.nav-button {
+  /* Basic Button Styling */
+  padding: 3px 5px;
+  color: white; /* White text */
+
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Makes it clear it's clickable */
+  transition: border 0.3s ease; /* Smooth color changes */
 }
+
+.nav-button:hover {
+  border: 3px solid #0056b3;
+}
+
+.nav-button:active {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.25);
+  border-color: rgba(139, 92, 246, 0.6); /* Optional: adds depth */
+}
+
+.nav-button.active {
+  border-bottom: 2px solid white;
+  background-color: rgba(99, 102, 241, 0.25);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.25);
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
 .dark-nav {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -60,6 +92,22 @@ nav ul li {
     margin: 25px 40px;
     font-size: 20px;
   }
+  nav h2 {
+    display: inline-block;
+    color: white;
+    font-size: 21px;
+    position: absolute;
+    right: 70px;
+
+    position: fixed;
+    top: 25px;
+    cursor: pointer;
+  }
+  nav h2:hover {
+    border: 3px solid #0056b3;
+    border-radius: 10px;
+  }
+
   nav ul {
     position: fixed;
     top: 0;
@@ -67,7 +115,7 @@ nav ul li {
     bottom: 0;
     width: 200px;
     padding-top: 70px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     z-index: -1;
     transition: 0.5s;
@@ -77,6 +125,10 @@ nav ul li {
     display: inline;
     width: 30px;
     cursor: pointer;
+  }
+  .menu-icon:hover {
+    border: 3px solid #0056b3;
+    border-radius: 10px;
   }
   .hide-menu {
     right: -250px;

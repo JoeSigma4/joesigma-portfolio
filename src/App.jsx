@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Skills from "./components/skills/Skills";
 import Title from "./components/Title/Title";
@@ -20,9 +20,8 @@ function App() {
         />
         <Skills />
         <Title
-          title="Skils Featured"
-          text="These are the projects I have done so far
-          "
+          title="Skills Featured"
+          text="These are the projects I have done so far"
         />
         <Project />
         <Title

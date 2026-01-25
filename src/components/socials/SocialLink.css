@@ -1,0 +1,41 @@
+.social-container {
+  display: flex;
+  justify-content: center; /* Centers the icons in the container */
+  gap: 20px; /* Adds space between icons */
+  margin: 20px 0;
+}
+
+.social-icon {
+  font-size: 40px; /* Controls the size of all icons */
+  color: #333; /* Default color (dark gray) */
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+  text-decoration: none; /* Removes any default link underlines */
+  border: 3px solid #333;
+  background: rgba(32, 31, 31, 0.227);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+/* Add hover effects for interactivity */
+.social-icon:hover {
+  transform: scale(1.3); /* Makes the icon pop slightly on hover */
+}
+
+/* Optional: Add brand colors on hover for a polished look */
+.social-icon.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icon.github:hover {
+  color: #000000;
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-icon.instagram:hover {
+  /* Instagram uses a gradient, a common way to simulate that is with a specific color */
+  color: #e4405f;
+}
