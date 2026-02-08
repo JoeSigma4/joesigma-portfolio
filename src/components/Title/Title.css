@@ -6,8 +6,16 @@
   line-height: 1.5;
 }
 .title h1 {
-  display: none;
+  font-size: 40px;
+  color: #e5e7eb;
+
+  background: linear-gradient(210deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
 }
+
 .title p {
   color: #6b7280;
 }

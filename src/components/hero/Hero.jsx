@@ -15,8 +15,17 @@ const Hero = () => {
           with technology.
         </p>
         <div className="btn-two">
-          <button className="btn left">View My Work</button>
-          <button className="btn right">Contact Me</button>
+          <a href="https://github.com/repos?q=owner:@me">
+            {" "}
+            <button className="btn left"> View My Work</button>
+          </a>
+          <a href="https://github.com/repos?q=owner:@me">
+            {" "}
+            <a href="https://wa.me/2348026923477">
+              {" "}
+              <button className="btn right"> Contact Me</button>
+            </a>
+          </a>
         </div>
       </div>
       <div className="creator">

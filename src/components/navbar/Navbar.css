@@ -79,11 +79,18 @@ nav ul li {
 @media (max-width: 1000px) {
   nav ul li {
     display: inline-block;
-    margin: 5px 20px;
-    font-size: 17px;
+    margin: 5px 15px;
+    font-size: 16px;
   }
-  .logo {
-    width: 100px;
+
+  nav h1 {
+    font-size: 27px;
+    font-weight: bolder;
+  }
+  .dark-nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
   }
 }
 
@@ -96,13 +103,27 @@ nav ul li {
 @media (max-width: 840px) {
   nav {
     padding: 15px 0;
+    border: #0056b3 solid 1px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
   }
   nav ul li {
     display: block;
     margin: 25px 40px;
-    font-size: 20px;
+    font-size: 25px;
   }
 
+  nav h1 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+  .dark-nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+  }
   nav h2 {
     display: inline-block;
     color: white;
