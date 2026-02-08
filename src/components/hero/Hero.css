@@ -22,14 +22,16 @@
   margin-top: 100px;
   color: #fff;
 }
-.hero-text h1 {
+h1 {
   text-align: center;
   font-size: 37px;
   font-weight: 900;
   white-space: nowrap;
   word-spacing: 1px;
   letter-spacing: 2px;
+  font-family: "Poppins", sans-serif !important;
 }
+
 .hero-text h2 {
   text-align: center;
   font-size: 42px;

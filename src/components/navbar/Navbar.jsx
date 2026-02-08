@@ -37,7 +37,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className={`container ${darkMode ? "dark-nav" : ""}`}>
-      <img src={logo} className="logo" />
+      <h1>The Cyber Sigma</h1>
 
       <ul className={menuOpen ? " " : "hide-menu"}>
         <h2>My Portfolio</h2>

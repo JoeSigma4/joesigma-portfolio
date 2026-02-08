@@ -10,16 +10,37 @@ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending...");
-    const formData = new FormData(event.target);
-    formData.append("access_key", process.env.REACT_APP_WEB3FORMS_KEY);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const key = import.meta.env.VITE_WEB3FORMS_KEY;
 
-    const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
+      if (!key) {
+        setResult("Access key missing");
+        return;
+      }
+
+      const formData = new FormData(event.target);
+      formData.append("access_key", key);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully ✅");
+        event.target.reset();
+      } else {
+        setResult(data.message || "Submission failed ❌");
+        console.log("Web3Forms error:", data);
+      }
+    } catch (error) {
+      console.error("Submit error:", error);
+      setResult("Network error ❌");
+      console.log(import.meta.env.VITE_WEB3FORMS_KEY);
+    }
   };
 
   return (
