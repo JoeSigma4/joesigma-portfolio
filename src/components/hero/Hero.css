@@ -148,7 +148,7 @@ h1 {
   }
   .creator img {
     width: 100%;
-    height: 400px;
+    height: 300px;
   }
 }
 @media (min-width: 350px) and (max-width: 655px) {
